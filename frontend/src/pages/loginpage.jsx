@@ -39,7 +39,7 @@ const navigate=useNavigate();
 
           <input type="email" required placeholder="Enter your email" name="email" value={formdata.email} onChange={handlechange} className="border p-2 w-full mb-3" />
 
-          <label className="block mb-1">Password</label>
+          <label className="block mb-1">Passsword</label>
 
           <input type="password" required placeholder="Enter your password" name="password" value={formdata.password} onChange={handlechange} className="border p-2 w-full mb-3" />
 
