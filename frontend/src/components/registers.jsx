@@ -10,17 +10,17 @@ function Registers() {
         resolver: zodResolver(registerschema)
     });
 
-    function onsubmit1(data) {
+    function onsubmitdata(data) {
         console.log(data);
         alert("Registration successful");
-        navigate("/");
+        navigate("/",{state:data});
     }
 
     return (
         <div className="p-5">
             <h1 className="text-2xl font-bold text-blue-500 mb-4 text-center">Register</h1>
 
-            <form onSubmit={handleSubmit(onsubmit1)} className="flex flex-col gap-2">
+            <form onSubmit={handleSubmit(onsubmitdata)} className="flex flex-col gap-2">
 
                 <input type="text" placeholder="Enter name" {...register("name")} className="border p-2" />
                 <p className="text-red-500">{errors.name?.message}</p>
